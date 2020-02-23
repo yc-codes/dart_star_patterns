@@ -1,5 +1,9 @@
 import 'package:dart_star_pattern/patterns/1.dart';
 import 'package:dart_star_pattern/patterns/2.dart';
+import 'package:dart_star_pattern/patterns/3.dart';
+import 'package:dart_star_pattern/patterns/4.dart';
+import 'package:dart_star_pattern/patterns/5.dart';
+import 'package:dart_star_pattern/patterns/6.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -35,7 +39,7 @@ class _BasePageState extends State<BasePage> {
       ),
       body: Column(
         children: <Widget>[
-          Pattern2(),
+          Pattern6(),
           MaterialButton(
             onPressed: () {
               setState(() {});
