@@ -9,12 +9,16 @@ class PrintPattern extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.white,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(6),
+        color: Theme.of(context).primaryColor.withOpacity(0.1),
+      ),
       alignment: Alignment.center,
       margin: EdgeInsets.symmetric(horizontal: 5),
       padding: EdgeInsets.only(top: 20),
       child: Text(
         result,
+        style: TextStyle(color: Theme.of(context).primaryColor),
       ),
     );
   }
