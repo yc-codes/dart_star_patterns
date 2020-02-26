@@ -1,19 +1,5 @@
-import 'package:dart_star_pattern/patterns/1.dart';
-import 'package:dart_star_pattern/patterns/11.dart';
-import 'package:dart_star_pattern/patterns/12.dart';
-import 'package:dart_star_pattern/patterns/13.dart';
-import 'package:dart_star_pattern/patterns/14.dart';
-import 'package:dart_star_pattern/patterns/2.dart';
-import 'package:dart_star_pattern/patterns/3.dart';
-import 'package:dart_star_pattern/patterns/4.dart';
-import 'package:dart_star_pattern/patterns/5.dart';
-import 'package:dart_star_pattern/patterns/6.dart';
-import 'package:dart_star_pattern/patterns/7.dart';
-import 'package:dart_star_pattern/patterns/8.dart';
-import 'package:dart_star_pattern/patterns/9.dart';
-import 'package:dart_star_pattern/patterns/10.dart';
+import 'package:dart_star_pattern/patterns/patterns.dart';
 import 'package:dart_star_pattern/widgets/detailView.dart';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -40,7 +26,6 @@ class _HomePageState extends State<HomePage> {
           minWidth: MediaQuery.of(context).size.width,
         ),
         child: GridView.builder(
-          physics: BouncingScrollPhysics(),
           itemCount: pages.length,
           padding: EdgeInsets.symmetric(horizontal: 5, vertical: 10),
           itemBuilder: (BuildContext context, int index) {

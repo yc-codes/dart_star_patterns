@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
         highlightColor: Colors.transparent,
       ),
       home: HomePage(),
-      themeMode: ThemeMode.system,
+      themeMode: ThemeMode.light,
       debugShowCheckedModeBanner: false,
     );
   }
