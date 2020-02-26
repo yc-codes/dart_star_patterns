@@ -67,5 +67,7 @@ class _HomePageState extends State<HomePage> {
     Pattern12(),
     Pattern13(),
     Pattern14(),
+    Pattern15(),
+    Pattern21(),
   ];
 }
