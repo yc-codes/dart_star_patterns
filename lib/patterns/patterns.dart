@@ -287,3 +287,94 @@ class Pattern21 extends StatelessWidget {
     );
   }
 }
+
+class Pattern24 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    var space = 4;
+    var result = "";
+    for (int i = 1; i <= 5; i++) {
+      result = result + "_" * space;
+      for (var j = 1; j <= 5; j++) {
+        result = result + ((j == 1 || j == 5 || i == 1 || i == 5) ? "*" : "_");
+      }
+      result = result + "\n";
+      space--;
+    }
+    return PrintPattern(
+      result: result,
+    );
+  }
+}
+
+class Pattern26 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    var result = "";
+    var count = 5;
+    for (var i = 1; i <= count; i++) {
+      for (int j = 1; j <= i; j++) {
+        result = result + "*";
+      }
+      for (int k = i * 2; k <= count * 2 - 1; k++) {
+        result = result + "_";
+      }
+      for (int l = 1; l <= i; l++) {
+        result = result + "*";
+      }
+      result = result + "\n";
+    }
+    for (int i = 1; i <= count - 1; i++) {
+      for (int j = count - 1; j >= i; j--) {
+        result = result + "*";
+      }
+      for (int k = 1; k <= i * 2; k++) {
+        result = result + "_";
+      }
+      for (int l = count - 1; l >= i; l--) {
+        result = result + "*";
+      }
+      result = result + "\n";
+    }
+    return PrintPattern(
+      result: result,
+    );
+  }
+}
+
+class Pattern27 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    var count = 5;
+    var result = "";
+    for (int i = 1; i <= count; i++) {
+      for (int j = i; j <= count; j++) {
+        result = result + "*";
+      }
+      for (int k = 1; k <= i * 2 - 2; k++) {
+        result = result + "_";
+      }
+      for (int l = i; l <= count; l++) {
+        result = result + "*";
+      }
+      result = result + "\n";
+    }
+
+    for (int i = 1; i <= count; i++) {
+      for (int j = 1; j <= i; j++) {
+        result = result + "*";
+      }
+      for (int k = i * 2 - 2; k < count * 2 - 2; k++) {
+        result = result + "_";
+      }
+      for (int l = 1; l <= i; l++) {
+        result = result + "*";
+      }
+
+      result = result + "\n";
+    }
+    return PrintPattern(
+      result: result,
+    );
+  }
+}
