@@ -1,4 +1,22 @@
-import 'package:dart_star_pattern/patterns/patterns.dart';
+import 'package:dart_star_pattern/patterns/1.dart';
+import 'package:dart_star_pattern/patterns/10.dart';
+import 'package:dart_star_pattern/patterns/11.dart';
+import 'package:dart_star_pattern/patterns/12.dart';
+import 'package:dart_star_pattern/patterns/13.dart';
+import 'package:dart_star_pattern/patterns/14.dart';
+import 'package:dart_star_pattern/patterns/15.dart';
+import 'package:dart_star_pattern/patterns/2.dart';
+import 'package:dart_star_pattern/patterns/21.dart';
+import 'package:dart_star_pattern/patterns/24.dart';
+import 'package:dart_star_pattern/patterns/26.dart';
+import 'package:dart_star_pattern/patterns/27.dart';
+import 'package:dart_star_pattern/patterns/3.dart';
+import 'package:dart_star_pattern/patterns/4.dart';
+import 'package:dart_star_pattern/patterns/5.dart';
+import 'package:dart_star_pattern/patterns/6.dart';
+import 'package:dart_star_pattern/patterns/7.dart';
+import 'package:dart_star_pattern/patterns/8.dart';
+import 'package:dart_star_pattern/patterns/9.dart';
 import 'package:dart_star_pattern/widgets/detailView.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -15,7 +33,7 @@ class _HomePageState extends State<HomePage> {
         SystemUiOverlayStyle(statusBarColor: Colors.transparent));
     return Scaffold(
       appBar: AppBar(
-        title: Text("Dart Patterns"),
+        title: Text("Star Patterns"),
         titleSpacing: 0,
         centerTitle: true,
       ),
@@ -27,7 +45,7 @@ class _HomePageState extends State<HomePage> {
         ),
         child: GridView.builder(
           itemCount: pages.length,
-          padding: EdgeInsets.symmetric(horizontal: 5, vertical: 10),
+          padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
           itemBuilder: (BuildContext context, int index) {
             return InkWell(
               onTap: () {
@@ -36,6 +54,7 @@ class _HomePageState extends State<HomePage> {
                   MaterialPageRoute(
                     builder: (context) => DetailView(
                       view: pages[index],
+                      codeSource: codeSourceList[index].toString(),
                     ),
                   ),
                 );
@@ -46,6 +65,7 @@ class _HomePageState extends State<HomePage> {
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
             mainAxisSpacing: 10,
+            crossAxisSpacing: 10,
           ),
         ),
       ),
@@ -72,5 +92,26 @@ class _HomePageState extends State<HomePage> {
     Pattern24(),
     Pattern26(),
     Pattern27(),
+  ];
+  List codeSourceList = [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    21,
+    24,
+    26,
+    27
   ];
 }

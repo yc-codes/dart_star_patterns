@@ -14,7 +14,6 @@ class PrintPattern extends StatelessWidget {
         color: Theme.of(context).primaryColor.withOpacity(0.1),
       ),
       alignment: Alignment.center,
-      margin: EdgeInsets.symmetric(horizontal: 5),
       padding: EdgeInsets.only(top: 20),
       child: Text(
         result,
